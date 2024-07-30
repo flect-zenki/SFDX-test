@@ -13,36 +13,48 @@ slds-size_1-of-2クラスは、列の幅の割合を指定します。ここで�
 slds-boxクラスは、要素を四角で囲むボックススタイルを適用します。
 slds-theme_defaultクラスは、デフォルトのテーマスタイルを適用します。
 -->
-<apex:page cache="false" sidebar="false" showHeader="false" standardController="VisualforceSave__c" docType="html-5.0" extensions="ModelController" applyBodyTag="false" applyHtmlTag="false">
+<apex:page standardController="VisualforceSave__c" extensions="ModelController">
+    <apex:slds />    
     <apex:form>
-    <apex:slds />
-    <div class="slds-grid slds-wrap">
-        <div class="slds-col slds-size_1-of-2">
-            <div class="slds-box slds-theme_default">
-                <h2 class="slds-text-heading_medium">入力ページ</h2>
-                <div class="slds-form-element slds-p-bottom_small">
-                    <label class="slds-form-element__label" for="title">要件名</label>
-                    <div class="slds-form-element__control">
-                        <apex:inputText styleClass="slds-input" id="title" value="{!VisualforceSave__c.RequirementName__c}" />
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-2">
+                <div class="slds-box slds-theme_default" style="width: 700px">
+                    <h2 class="slds-text-heading_medium">入力ページ</h2>
+                    <div class="slds-grid slds-gutters">
+                        <div class="slds-col slds-size_1-of-3">
+                            <div class="slds-form-element__label" style="margin-top: 15px">要件名</div>
+                        </div>
+                        <div class="slds-col slds-size_2-of-3">
+                            <div class="slds-form-element__control">
+                                <apex:inputText styleClass="slds-input" value="{!VisualforceSave__c.RequirementName__c}" style="margin-top: 15px"/>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="slds-form-element slds-p-bottom_small">
-                    <label class="slds-form-element__label" for="email">返信先メールアドレス</label>
-                    <div class="slds-form-element__control">
-                        <apex:inputText styleClass="slds-input" id="email" value="{!VisualforceSave__c.ResponseMailAddress__c}" />
+                    <div class="slds-grid slds-gutters">
+                        <div class="slds-col slds-size_1-of-3">
+                            <div class="slds-form-element__label" style="margin-top: 15px">返信先メールアドレス</div>
+                        </div>
+                        <div class="slds-col slds-size_2-of-3">
+                            <div class="slds-form-element__control">
+                                <apex:inputText styleClass="slds-input" value="{!VisualforceSave__c.ResponseMailAddress__c}" style="margin-top: 15px"/>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="slds-form-element slds-p-bottom_small">
-                    <label class="slds-form-element__label" for="dateTime">実施予定日</label>
-                    <div class="slds-form-element__control">
-                        <apex:inputField styleClass="slds-input" id="date" value="{!VisualforceSave__c.ScheduledDate__c}" />
+                    <div class="slds-grid slds-gutters">
+                        <div class="slds-col slds-size_1-of-3">
+                            <div class="slds-form-element__label" style="margin-top: 15px">実施予定日</div>
+                        </div>
+                        <div class="slds-col slds-size_2-of-3">
+                            <div class="slds-form-element__control">
+                                <apex:inputField styleClass="slds-input" value="{!VisualforceSave__c.ScheduledDate__c}" style="margin-top: 15px"/>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="slds-form-element">
-                    <apex:commandButton styleClass="slds-button slds-button_brand" action="{!nextConfirm}" value="次へ" />
+                    <div class="slds-form-element">
+                        <apex:commandButton styleClass="slds-button slds-button_brand" action="{!nextConfirm}" value="次へ" style="margin-top: 15px"/>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </apex:form>
 </apex:page>
