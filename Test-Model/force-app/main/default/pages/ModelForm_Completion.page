@@ -1,4 +1,4 @@
-<apex:page cache="false" sidebar="false" showHeader="false" standardController="VisualforceSave__c" docType="html-5.0" extensions="ModelController" applyBodyTag="false" applyHtmlTag="false">
+<apex:page standardController="VisualforceSave__c" extensions="ModelController">
     <apex:form>
     <apex:slds />
     <div class="slds-grid slds-wrap">
