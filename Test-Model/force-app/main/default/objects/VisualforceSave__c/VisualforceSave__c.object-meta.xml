@@ -155,8 +155,9 @@
     <externalSharingModel>Private</externalSharingModel>
     <label>Visualforceフォーム回答</label>
     <nameField>
-        <label>Visualforceフォーム回答名</label>
-        <type>Text</type>
+        <displayFormat>VF{000000}DATE{YYYYMMDD}</displayFormat>
+        <label>Visualforceフォーム回答受領採番</label>
+        <type>AutoNumber</type>
     </nameField>
     <searchLayouts></searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
