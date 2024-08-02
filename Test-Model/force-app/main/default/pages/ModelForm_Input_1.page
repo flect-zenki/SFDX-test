@@ -50,6 +50,52 @@ slds-theme_defaultクラスは、デフォルトのテーマスタイルを適�
                             </div>
                         </div>
                     </div>
+                    <!-- ラジオボタン制御モデル -->
+                    <div class="slds-grid slds-gutters">
+                        <apex:selectRadio value="{!radioSelect}" layout="pageDirection">
+                            <apex:selectOption itemLabel="選択肢A" itemValue="Aを選んだ"/>
+                            <apex:selectOption itemLabel="選択肢B" itemValue="Bを選んだ"/>
+                            <apex:actionSupport event="onchange" reRender="selectedView"/>
+                        </apex:selectRadio>
+                    </div>
+                    <apex:outputPanel id="selectedView">
+                        <apex:outputPanel rendered="{!IF(radioSelect!='',true,false)}">
+                            <div class="slds-grid slds-gutters">
+                                <div class="slds-col slds-size_1-of-3">
+                                    <div class="slds-form-element__label" style="margin-top: 15px">どちらを選択しても回答してください</div>
+                                </div>
+                                <div class="slds-col slds-size_2-of-3">
+                                    <div class="slds-form-element__control">
+                                        <apex:inputText styleClass="slds-input" value="{!anySelected}" style="margin-top: 15px"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </apex:outputPanel>
+                        <apex:outputPanel rendered="{!IF(radioSelect=='Aを選んだ',true,false)}">
+                            <div class="slds-grid slds-gutters">
+                                <div class="slds-col slds-size_1-of-3">
+                                    <div class="slds-form-element__label" style="margin-top: 15px">なぜAを選びましたか？</div>
+                                </div>
+                                <div class="slds-col slds-size_2-of-3">
+                                    <div class="slds-form-element__control">
+                                        <apex:inputText styleClass="slds-input" value="{!selectedA}" style="margin-top: 15px"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </apex:outputPanel>
+                        <apex:outputPanel rendered="{!IF(radioSelect=='Bを選んだ',true,false)}">
+                            <div class="slds-grid slds-gutters">
+                                <div class="slds-col slds-size_1-of-3">
+                                    <div class="slds-form-element__label" style="margin-top: 15px">なぜBを選びましたか？</div>
+                                </div>
+                                <div class="slds-col slds-size_2-of-3">
+                                    <div class="slds-form-element__control">
+                                        <apex:inputText styleClass="slds-input" value="{!selectedB}" style="margin-top: 15px"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </apex:outputPanel>
+                    </apex:outputPanel>
                     <div class="slds-form-element">
                         <apex:commandButton styleClass="slds-button slds-button_brand" action="{!nextConfirm}" value="次へ" style="margin-top: 15px"/>
                     </div>

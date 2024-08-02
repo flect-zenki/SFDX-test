@@ -1,9 +1,13 @@
-public class ModelController {
+public without sharing class ModelController {
     private ApexPages.StandardController standardController;
-
     public ModelController(ApexPages.StandardController standardController) {
         this.standardController = standardController;
     }
+
+    public String radioSelect {get;set;}
+    public String anySelected {get;set;}
+    public String selectedA {get;set;}
+    public String selectedB {get;set;}
 
     public PageReference nextConfirm() {
         return Page.ModelForm_Confirm;
