@@ -23,6 +23,22 @@
                         <span class="slds-form-element__static">{!VisualforceSave__c.ScheduledDate__c}</span>
                     </div>
                 </div>
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label">日付型</label>
+                    <div class="slds-form-element__control">
+                        <apex:outputText value="{0, date, YYYY/MM/dd}">
+                            <apex:param value="{!testDate }"/>
+                        </apex:outputText>
+                    </div>
+                </div>
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label">日時型</label>
+                    <div class="slds-form-element__control">
+                        <apex:outputText value="{0, date, YYYY/MM/dd HH:mm}">
+                            <apex:param value="{!testDateTime  + 0.375}"/>
+                        </apex:outputText>
+                    </div>
+                </div>
                 <div class="slds-p-top_medium">
                     <apex:commandButton styleClass="slds-button slds-button_neutral" action="{!goBackInput_1}" value="戻る" />
                     <apex:commandButton styleClass="slds-button slds-button_brand" action="{!saveAndNextCompletion}" value="完了" />

@@ -13,7 +13,8 @@ slds-size_1-of-2クラスは、列の幅の割合を指定します。ここで�
 slds-boxクラスは、要素を四角で囲むボックススタイルを適用します。
 slds-theme_defaultクラスは、デフォルトのテーマスタイルを適用します。
 -->
-<apex:page standardController="VisualforceSave__c" extensions="ModelController">
+<apex:page standardController="VisualforceSave__c" extensions="ModelController" docType="html-5.0">
+    <html lang="ja">
     <apex:slds />    
     <apex:form>
         <div class="slds-grid slds-wrap">
@@ -50,11 +51,54 @@ slds-theme_defaultクラスは、デフォルトのテーマスタイルを適�
                             </div>
                         </div>
                     </div>
+                    <!-- Standerdコントローラに帰属しない入力 -->
+                    <div class="slds-grid slds-gutters">
+                        <div class="slds-col slds-size_1-of-3">
+                            <div class="slds-form-element__label" style="margin-top: 15px">日付型</div>
+                        </div>
+                        <div class="slds-col slds-size_2-of-3">
+                            <div class="slds-form-element__control">
+                                <apex:input type="date" styleClass="slds-input" value="{!testDate}" style="margin-top: 15px"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-gutters">
+                        <div class="slds-col slds-size_1-of-3">
+                            <div class="slds-form-element__label" style="margin-top: 15px">日時型</div>
+                        </div>
+                        <div class="slds-col slds-size_2-of-3">
+                            <div class="slds-form-element__control">
+                                <apex:input type="datetime-local" styleClass="slds-input" value="{!testDateTime}" style="margin-top: 15px" rendered="true"/>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ページ遷移モデル -->
+                    <div class="slds-grid slds-gutters">
+                        <div class="slds-col slds-size_1-of-3">
+                            <div class="slds-form-element__label">同タブ遷移</div>
+                        </div>
+                        <div class="slds-col slds-size_2-of-3">
+                            <div class="slds-form-element__control">
+                                <a href="https://www.flect.co.jp/">フレクトのホームページに遷移します</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-gutters">
+                        <div class="slds-col slds-size_1-of-3">
+                            <div class="slds-form-element__label">別タブ遷移</div>
+                        </div>
+                        <div class="slds-col slds-size_2-of-3">
+                            <div class="slds-form-element__control">
+                                <a href="https://www.flect.co.jp/" target="_blank">フレクトのホームページを新しいタブで表示します</a>
+                            </div>
+                        </div>
+                    </div>
                     <!-- ラジオボタン制御モデル -->
                     <div class="slds-grid slds-gutters">
-                        <apex:selectRadio value="{!radioSelect}" layout="pageDirection">
+                        <apex:selectRadio value="{!radioSelect}" layout="pageDirection" required="true">
                             <apex:selectOption itemLabel="選択肢A" itemValue="Aを選んだ"/>
                             <apex:selectOption itemLabel="選択肢B" itemValue="Bを選んだ"/>
+                            <apex:selectOption itemLabel="コンポーネントを開く" itemValue="selectedCompnent"/>
                             <apex:actionSupport event="onchange" reRender="selectedView"/>
                         </apex:selectRadio>
                     </div>
@@ -70,6 +114,16 @@ slds-theme_defaultクラスは、デフォルトのテーマスタイルを適�
                                     </div>
                                 </div>
                             </div>
+                            <div class="slds-grid slds-gutters">
+                                <div class="slds-col slds-size_1-of-3">
+                                    <div class="slds-form-element__label">別タブ遷移</div>
+                                </div>
+                                <div class="slds-col slds-size_2-of-3">
+                                    <div class="slds-form-element__control">
+                                        <a href="https://www.flect.co.jp/" target="_blank">フレクトのホームページを新しいタブで表示します</a>
+                                    </div>
+                                </div>
+                            </div>      
                         </apex:outputPanel>
                         <apex:outputPanel rendered="{!IF(radioSelect=='Aを選んだ',true,false)}">
                             <div class="slds-grid slds-gutters">
@@ -103,4 +157,5 @@ slds-theme_defaultクラスは、デフォルトのテーマスタイルを適�
             </div>
         </div>
     </apex:form>
+    </html>
 </apex:page>

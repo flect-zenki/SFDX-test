@@ -8,6 +8,8 @@ public without sharing class ModelController {
     public String anySelected {get;set;}
     public String selectedA {get;set;}
     public String selectedB {get;set;}
+    public Date testDate {get;set;}
+    public Datetime testDateTime {get;set;}
 
     public PageReference nextConfirm() {
         return Page.ModelForm_Confirm;
