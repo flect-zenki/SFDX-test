@@ -79,7 +79,7 @@ slds-theme_defaultクラスは、デフォルトのテーマスタイルを適�
                         </div>
                         <div class="slds-col slds-size_2-of-3">
                             <div class="slds-form-element__control">
-                                <a href="https://www.flect.co.jp/">フレクトのホームページに遷移します</a>
+                                <a href="https://www.google.co.jp/">Googleのホームページに遷移します</a>
                             </div>
                         </div>
                     </div>
@@ -89,7 +89,7 @@ slds-theme_defaultクラスは、デフォルトのテーマスタイルを適�
                         </div>
                         <div class="slds-col slds-size_2-of-3">
                             <div class="slds-form-element__control">
-                                <a href="https://www.flect.co.jp/" target="_blank">フレクトのホームページを新しいタブで表示します</a>
+                                <a href="https://www.google.co.jp/" target="_blank">Googleのホームページを新しいタブで表示します</a>
                             </div>
                         </div>
                     </div>
@@ -120,7 +120,7 @@ slds-theme_defaultクラスは、デフォルトのテーマスタイルを適�
                                 </div>
                                 <div class="slds-col slds-size_2-of-3">
                                     <div class="slds-form-element__control">
-                                        <a href="https://www.flect.co.jp/" target="_blank">フレクトのホームページを新しいタブで表示します</a>
+                                        <a href="https://www.google.co.jp/" target="_blank">Googleのホームページを新しいタブで表示します</a>
                                     </div>
                                 </div>
                             </div>      
