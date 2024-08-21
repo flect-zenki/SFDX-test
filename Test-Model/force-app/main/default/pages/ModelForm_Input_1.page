@@ -103,7 +103,7 @@ slds-theme_defaultクラスは、デフォルトのテーマスタイルを適�
                         </apex:selectRadio>
                     </div>
                     <apex:outputPanel id="selectedView">
-                        <apex:outputPanel rendered="{!IF(radioSelect!='',true,false)}">
+                        <apex:outputPanel rendered="{! radioSelect!=''}">
                             <div class="slds-grid slds-gutters">
                                 <div class="slds-col slds-size_1-of-3">
                                     <div class="slds-form-element__label" style="margin-top: 15px">どちらを選択しても回答してください</div>
@@ -125,7 +125,7 @@ slds-theme_defaultクラスは、デフォルトのテーマスタイルを適�
                                 </div>
                             </div>      
                         </apex:outputPanel>
-                        <apex:outputPanel rendered="{!IF(radioSelect=='Aを選んだ',true,false)}">
+                        <apex:outputPanel rendered="{! radioSelect=='Aを選んだ'}">
                             <div class="slds-grid slds-gutters">
                                 <div class="slds-col slds-size_1-of-3">
                                     <div class="slds-form-element__label" style="margin-top: 15px">なぜAを選びましたか？</div>
@@ -137,7 +137,7 @@ slds-theme_defaultクラスは、デフォルトのテーマスタイルを適�
                                 </div>
                             </div>
                         </apex:outputPanel>
-                        <apex:outputPanel rendered="{!IF(radioSelect=='Bを選んだ',true,false)}">
+                        <apex:outputPanel rendered="{! radioSelect=='Bを選んだ'}">
                             <div class="slds-grid slds-gutters">
                                 <div class="slds-col slds-size_1-of-3">
                                     <div class="slds-form-element__label" style="margin-top: 15px">なぜBを選びましたか？</div>
